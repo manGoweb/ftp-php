@@ -96,7 +96,8 @@ class Ftp
 			}
 			$func = $parts['scheme'] === 'ftp' ? 'connect' : 'ssl_connect';
 			$this->$func($parts['host'], empty($parts['port']) ? NULL : (int) $parts['port']);
-			$this->login(urldecode($parts['user']), urldecode($parts['pass']));
+			$this->raw('USER ' . urldecode($parts['user']));
+			$this->raw('PASS ' . urldecode($parts['pass']));
 			$this->pasv((bool) $passiveMode);
 			if (isset($parts['path'])) {
 				$this->chdir($parts['path']);
