@@ -1,5 +1,5 @@
 {
-	"name": "dg/ftp-php",
+	"name": "mangoweb/ftp-php",
 	"description": "Easy-to-use library for accessing FTP servers",
 	"keywords": ["ftp"],
 	"homepage": "https://github.com/dg/ftp-php",
